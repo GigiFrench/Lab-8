@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    <body>
+        <h1>Gigi French</h1>
+        <h3>NJIT,gnf,Interior Design</h3>
+        <p>I am 18 years old, and enjoy doing adventurous, artsy things. My favorite place to go is the beach. I love swimming and collecting seaglass.</p>
+        <img src="https://images.squarespace-cdn.com/content/v1/574ff940b09f95f3b309b82b/1483314428934-0H8FTQWI1M08GPM2L6JG/beach-healing.jpg?format=1500w" alt="The beach"
+            width="300"
+            height="300">
+        <table class="table">
+            <tr>
+                <th>Education</th>
+                <th>Experience</th> 
+                <th>Skills</th>
+            </tr>
+            <tr>
+                <td>Graduated Highschschool</td>
+                <td>Attending NJIT</td> 
+                <td> Can type without looking</td>
+            </tr>
+            <tr>
+                <td>Attending NJIT</td>
+                <td>Been to Italy</td> 
+                <td>Can snowboard</td>
+            </tr>
+        </table> 
+        <form action="#"method="post">
+            <label for="first">First Name:</label>
+            <input type="text" id="first" name="first">
+            <br>
+            <label for="last">Last Name:</label>
+            <input type="text" id="last" name="last">
+            <br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <br>
+            <label for="interest">Select Your Interest</label>
+            <select>
+                <option>Math</option>
+                <option>Architecture</option>
+                <option>Computer Science</option>
+            </select>
+        </form>
+
+        <h2>Registered Classes</h2>
+        <ul>
+            <li>Color and Composition</li>
+            <li>History of Art+Design 1</li>
+            <li>English Composition 101</li>
+            <li>Computer Programming</li>
+            <li>Math 107</li>
+            <li>First year Seminar</li>
+        </ul>
+        <img src="https://good-nature-blog-uploads.s3.amazonaws.com/uploads/2022/01/good-nature-homepage-hero_2-scaled.jpg" class="img1"
+          width="300"
+          height="300"
+          style="color: red; border: 5px">
+        <img src="https://realsteelcenter.com/cdn/shop/products/realsteelcenter_tree-of-life_black.jpg?v=1596015107" class="img2"
+          width="300"
+          height="300"
+          style="color: red; border: 5px">
+        <img src="https://media.istockphoto.com/id/1311066967/vector/glass-islamic-greek-amulet-evil-eye-protection-sign.jpg?s=612x612&w=0&k=20&c=KAk-ljrLQj6rZdkjbGDg9idkshsMtg1VSdi_YVE4_Yw=" class="img3"
+          width="300"
+          height="300"
+          style="color: red; border: 5pxå">
+        <table class="table table-striped">
+            <tr>
+                <th>Education</th>
+                <th>Experience</th> 
+                <th>Skills</th>
+            </tr>
+            <tr>
+                <td>Graduated Highschschool</td>
+                <td>Attending NJIT</td> 
+                <td> Can type without looking</td>
+            </tr>
+            <tr>
+                <td>Attending NJIT</td>
+                <td>Been to Italy</td> 
+                <td>Can snowboard</td>
+            </tr>
+        </table>
+        <button id="changeTextBtn">Click me</button>
+        <p id="displayText">Display text</p>
+
+        <form>
+            <label for="Username">Username:</label><br>
+            <input type="text" id="Username" name="Username" value=""><br>
+            <label for="Password">Password:</label><br>
+            <input type="text" id="Password" name="Password" value=""><br><br>
+            <button onclick="checksubmission(event)">Submit</button>
+        </form> 
+
+        <script>
+            let num1 = 10;
+            let num2 = 24;
+            console.log(num1 + num2);
+            console.log(num1 - num2);
+            console.log(num1 * num2);
+            function calculateGrade(userScore) {
+                if (userScore >= 90) {
+                    return "A Grade";
+                } else if (userScore >= 80 && userScore <= 89) {
+                    return "B Grade";
+                }  else if (userScore >= 70 && userScore <= 79) {
+                    return "C Grade";
+                } else if (userScore >=60 && userScore <=69) {
+                    return "D Grade";
+                } else {
+                    return "F Grade";
+                }
+            }
+            var grade = 91
+            console.log(calculateGrade(grade));
+            grade = 76
+            console.log(calculateGrade(grade));
+            grade = 87
+            console.log(calculateGrade(grade));
+
+            const myElement = document.getElementById("changeTextBtn");
+            myElement.addEventListener ("click", changetext);
+            
+            function changetext() {
+                const Pink = document.getElementById('displayText');
+                Pink.innerHTML = 'Hello, JavaScript World!';
+            } 
+
+            function checksubmission(e) {
+                e.preventDefault()
+                let Username = document.getElementById("Username");
+                let Password = document.getElementById("Password");
+                if (Username.value == '' || Password.value == ''){
+                    alert("One of the fields is empty. Please fill it before submitting.");
+                } else {
+                    setTimeout(function() {
+                    alert("Information Successfully Sent. Thanks for Visiting Quintfolio!");
+                    }, 3000);
+                }
+            }
+           
+        </script>
+    </body>
+</html>
+
